@@ -1,4 +1,4 @@
-// The screen shown before the game starts: play on this computer, or host or join an online room. Also the
+// The screen shown before the game starts: play offline, or host or join an online room. Also the
 // status line and waiting panel shown during an online game.
 import type { SeatInfo } from '../net/protocol.ts';
 import type { LinkState } from '../net/mesh.ts';
@@ -86,7 +86,7 @@ export class Lobby {
       this.setStatus(NAME_RULE);
     });
     nameRow.append(this.nameIn);
-    const localBtn = el('button', 'primary', 'Play on this computer');
+    const localBtn = el('button', 'primary', 'Play offline');
     const hostBtn = el('button', '', 'Host an online game');
     const joinRow = el('div', 'lobby-join');
     const codeIn = el('input');
